@@ -20,7 +20,7 @@ import TextArea from "../../components/form/input/TextArea";
 import { object, string, number } from 'yup';
 import useForm from "../../hooks/useForm";
 import Checkbox from "../../components/form/input/Checkbox";
-import DocGenerator from "./DocGenerator";
+
 import { useReactToPrint } from "react-to-print";
 import Bauncher3 from "../../components/Bauncher3/Bauncher3";
 
@@ -1505,7 +1505,7 @@ export default function ManifiestoPage() {
               Descargar Manifiestos
                 </Button>
               
-                <DocGenerator headerData={data} />
+                
             </div>
               
                 <PageBreadcrumb pageTitle={`Total: ${peso_Total.toFixed(2)}KG`} />
