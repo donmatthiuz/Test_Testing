@@ -170,12 +170,12 @@ export interface Item_Bulto {
   telefonorecibe: string;
 }
 
-interface HeaderData {
-  no: number;
-  frios: number;
-  seco: number;
-  kg: number;
-}
+// interface HeaderData {
+//   no: number;
+//   frios: number;
+//   seco: number;
+//   kg: number;
+// }
 
 export default function ManifiestoPage() {
 
@@ -189,27 +189,27 @@ export default function ManifiestoPage() {
   //   });
   // };
 
-  const contarTiposBultos = (bultos: Item_Bulto[]) => {
-    const idsUnicos = new Set<number>();
-    let seco = 0;
-    let frio = 0;
+  // const contarTiposBultos = (bultos: Item_Bulto[]) => {
+  //   const idsUnicos = new Set<number>();
+  //   let seco = 0;
+  //   let frio = 0;
   
-    for (const bulto of bultos) {
-      if (!idsUnicos.has(bulto.id)) {
-        idsUnicos.add(bulto.id);
+  //   for (const bulto of bultos) {
+  //     if (!idsUnicos.has(bulto.id)) {
+  //       idsUnicos.add(bulto.id);
   
-        const tipo = bulto.tipo.trim().toLowerCase();
-        if (tipo === "seco") seco++;
-        else if (tipo === "frio") frio++;
-      }
-    }
+  //       const tipo = bulto.tipo.trim().toLowerCase();
+  //       if (tipo === "seco") seco++;
+  //       else if (tipo === "frio") frio++;
+  //     }
+  //   }
   
-    return {
-      total: idsUnicos.size,
-      seco,
-      frio
-    };
-  }
+  //   return {
+  //     total: idsUnicos.size,
+  //     seco,
+  //     frio
+  //   };
+  // }
 
 
   const handleChange_useForm = (e:any) => {
@@ -756,12 +756,12 @@ export default function ManifiestoPage() {
 
   
 
-  const [data, setData] = useState<HeaderData>({
-    no: 0,
-    frios: 0,
-    seco: 0,
-    kg: 0,
-  });
+  // const [data, setData] = useState<HeaderData>({
+  //   no: 0,
+  //   frios: 0,
+  //   seco: 0,
+  //   kg: 0,
+  // });
 
   const [atiende, setAtiende] = useState('')
 
@@ -860,11 +860,11 @@ export default function ManifiestoPage() {
       
       
 
-      const respuesta_cantidad = contarTiposBultos(reposne_bultos.response.bultos)
-      updateField("no", respuesta_cantidad.total);
-      updateField("seco", respuesta_cantidad.seco);
-      updateField("frios", respuesta_cantidad.frio);
-      updateField("kg", reposne_bultos.response.totalKilos);
+      // const respuesta_cantidad = contarTiposBultos(reposne_bultos.response.bultos)
+      // updateField("no", respuesta_cantidad.total);
+      // updateField("seco", respuesta_cantidad.seco);
+      // updateField("frios", respuesta_cantidad.frio);
+      // updateField("kg", reposne_bultos.response.totalKilos);
 
       
       setBultos(reposne_bultos.response.bultos);
@@ -1059,12 +1059,12 @@ export default function ManifiestoPage() {
 
   }
 
-  const updateField = (field: keyof HeaderData, value: number) => {
-    setData(prev => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
+  // const updateField = (field: keyof HeaderData, value: number) => {
+  //   setData(prev => ({
+  //     ...prev,
+  //     [field]: value,
+  //   }));
+  // };
   
 
   const addSameBulto = (items: Item[]) => {
