@@ -30,7 +30,6 @@
     "axios": "^1.8.4",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
-    "docx": "^9.4.0",
     "exceljs": "^4.4.0",
     "file-saver": "^2.0.5",
     "flatpickr": "^4.6.13",
